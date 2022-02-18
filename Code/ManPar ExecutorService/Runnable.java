@@ -14,14 +14,14 @@ public class Runnable implements java.lang.Runnable {
     private short getIndex(Complex c) {
         Complex z = new Complex(0, 0);
 
-        short curr_iter = -128;
+        short currIter = -128;
 
         while (z.abs() <= 2 && curr_iter < DynamicMandelbrot.MAX_ITERATIONS) {
             z = calcNewValue(z, c);
-            curr_iter++;
+            currIter++;
         }
 
-        return curr_iter;
+        return currIter;
     }
 
     @Override
