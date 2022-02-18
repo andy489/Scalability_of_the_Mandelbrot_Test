@@ -33,8 +33,7 @@ public class Runnable implements java.lang.Runnable {
                 double pixel_x = DynamicMandelbrot.RE_START + ((double) x / DynamicMandelbrot.WIDTH) * (DynamicMandelbrot.RE_END - DynamicMandelbrot.RE_START);
                 double pixel_y = DynamicMandelbrot.IM_START + ((double) y / (DynamicMandelbrot.HEIGHT)) * (DynamicMandelbrot.IM_END - DynamicMandelbrot.IM_START);
                 Complex c = new Complex(pixel_x, pixel_y);
-
-                // Compute number of iterations // change comment
+            
                 DynamicMandelbrot.indices[x][y] = (byte)getIndex(c);
             }
         }
